@@ -1,4 +1,5 @@
 import {JalaliDateTime} from 'jalali-date-time';
+import {Button} from 'react-native';
 
 // Default configuration
 const config = {
@@ -15,11 +16,19 @@ function MyDate() {
   // Load modules
   //   const JalaliDateTime = require('jalali-date-time');
   const jalali = JalaliDateTime(config);
-  console.log('Jalali Date Time:', `'${jalali.now().replace(' ', '')}'`);
-//   console.log('Jalali Title:', `'${jalali.toTitle()}'`);
+  // console.log('Jalali Date Time:', `'${jalali.now().replace(' ', '')}'`);
 
-  console.log('object');
-  return jalali;
+  return (
+    <Button
+      title="Click"
+      onPress={() => {
+        const current = new Date();
+        console.log('First:', current);
+        current.setDate(current.getDate()+60);
+        console.log('Last:', current);
+      }}
+    />
+  );
 }
 
 export default MyDate;

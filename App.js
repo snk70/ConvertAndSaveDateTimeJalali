@@ -11,11 +11,12 @@ import {
 import MyDate from './android/myapp/mydate';
 
 const App = () => {
-  MyDate();
+  // MyDate();
   return (
     <SafeAreaView>
       <StatusBar backgroundColor={'blue'} />
       <Text>I'm Sina Kordestani</Text>
+      <MyDate />
     </SafeAreaView>
   );
 };
