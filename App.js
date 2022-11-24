@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import MyDate from './android/myapp/mydate';
+import SaveAsync from './android/myapp/saveasync';
 
 const App = () => {
   // MyDate();
@@ -17,6 +18,8 @@ const App = () => {
       <StatusBar backgroundColor={'blue'} />
       <Text>I'm Sina Kordestani</Text>
       <MyDate />
+      <View style={{height:200,width:'100%',backgroundColor:'red'}}></View>
+      <SaveAsync.SaveAsync />
     </SafeAreaView>
   );
 };
